@@ -1,14 +1,19 @@
-import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
+import React, { useContext } from "react";
+
 import "../../styles/home.css";
 import { Card } from "../component/Card";
 import { Tarjeta } from "../component/Tarjeta";
+import { People } from "./people";
+import { Context } from "../store/appContext";
 
 export const Home = () => (
+ 
+
 	<div className="text-center mt-5">
 
 		<Card />
 		<Tarjeta />
+		<People />
 		{/* <h1>Hello Rigo!</h1>
 		<p>
 			<img src={rigoImage} />
