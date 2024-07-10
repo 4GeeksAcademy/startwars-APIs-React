@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import getState from "./flux.js";
+import { People } from "../views/people.js";
 
 // Don't change, here is where we initialize our context, by default it's just going to be null.
 export const Context = React.createContext(null);
@@ -31,14 +32,14 @@ const injectContext = PassedComponent => {
 			 * state.actions.loadSomeData(); <---- calling this function from the flux.js actions
 			 *
 			 **/
-			state.actions.getPerson()
+			state.actions.getPerson(People)
 		}, []);
 
 		// The initial value for the context is not null anymore, but the current state of this component,
 		// the context will now have a getStore, getActions and setStore functions available, because they were declared
 		// on the state of this component
 		return (
-			<Context.Provider value={state}>
+			<Context.Provider value={People}>
 				<PassedComponent {...props} />
 			</Context.Provider>
 		);
