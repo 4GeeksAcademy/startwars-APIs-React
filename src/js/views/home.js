@@ -11,8 +11,8 @@ export const Home = () => (
 
 	<div className="text-center mt-5">
 
-		<Card />
-		<Tarjeta />
+		
+		
 		<People />
 		{/* <h1>Hello Rigo!</h1>
 		<p>
